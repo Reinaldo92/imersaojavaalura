@@ -28,7 +28,7 @@ public class App {
         JsonParser jsonParser = new JsonParser();
 
         List<Map<String, String>> listaDeFilmes = jsonParser.parse(body);
-        // System.out.println(listaDeFilmes.size());
+        System.out.println(listaDeFilmes.size());
         System.out.println(listaDeFilmes);
 
         for (Map<String, String> map : listaDeFilmes) {

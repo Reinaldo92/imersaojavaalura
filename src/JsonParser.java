@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class JsonParser {
 
     private static final Pattern REGEX_ITEMS = Pattern.compile(".\\[(.+)].*");
-    private static final Pattern REGEX_ATRIBUTES_JSON = Pattern.compile("\"(.+?)\":\"(.?)\"");
+    private static final Pattern REGEX_ATRIBUTES_JSON = Pattern.compile("\"(.+?)\":\"(.*?)\"");
 
     public List<Map<String, String>> parse(String json) {
 
@@ -33,7 +33,7 @@ public class JsonParser {
                 attributosItem.put(chave, valor);
 
             }
-
+            dados.add(attributosItem);
         }
 
         return dados;
